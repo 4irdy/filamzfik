@@ -319,12 +319,32 @@ h2 {
 
 
 
+/* GALLERY LAYOUT OVERRIDES (1x1 / 2x2 / 3x3 toggle) */
+
+.gallery-grid.cols-1 {
+    grid-template-columns: 1fr;
+}
+
+
+.gallery-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.gallery-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
 /* FILTERS */
 
 .filters {
     display: flex;
 
     flex-wrap: wrap;
+
+    align-items: center;
 
     gap: 25px;
 
@@ -361,6 +381,49 @@ h2 {
 
 
 .filter.active {
+    opacity: 1;
+}
+
+
+
+/* LAYOUT TOGGLE (1x1 / 2x2 / 3x3 buttons) */
+
+.layout-toggle {
+    display: flex;
+
+    gap: 15px;
+
+    margin-left: auto;
+}
+
+
+.layout-btn {
+    background: none;
+
+    border: none;
+
+    color: #f3e9e5;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    opacity: 0.45;
+}
+
+
+.layout-btn:hover {
+    opacity: 1;
+}
+
+
+.layout-btn.active {
     opacity: 1;
 }
 
