@@ -465,11 +465,17 @@ footer {
     }
 
 
-    .challenge-grid,
-    .gallery-grid {
+    .challenge-grid {
         grid-template-columns: 1fr;
 
         gap: 50px;
+    }
+
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
     }
 
 
